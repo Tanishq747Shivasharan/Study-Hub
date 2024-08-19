@@ -1,47 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Study Hub</title>
     <link rel="stylesheet" href="styles.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="Headcontainer">
-            <h1>Study Hub</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#notes">Notes</a></li>
-                    <li><a href="#cyber pathways">Cyber Pathways</a></li>
-                    <li><a href="#laptops">Laptops</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="Headcontainer">
+        <h1>Study Hub</h1>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#notes">Notes</a></li>
+            <li><a href="#cyber pathways">Cyber Pathways</a></li>
+            <li><a href="#laptops">Laptops</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <div id="home" class="section1">
-        <h1>Welcome to Study Hub!</h1>
-        <marquee behavior="" direction="">
-            <h3>A site where you can find <span style="color: yellow;">free study matrial</span> related to <span
-                    style="color: aqua;">Computer Technology</span>.</h3>
-        </marquee>
+      <h1>Welcome to Study Hub!</h1>
+      <marquee behavior="" direction="">
+        <h3>
+          A site where you can find
+          <span style="color:rgb(146, 82, 237)">free study matrial</span> related to
+          <span style="color:rgb(146, 82, 237)">Computer Technology</span>.
+        </h3>
+      </marquee>
     </div>
     <div id="notes" class="section2">
+      <center>
         <h1>Notes</h1>
+      </center>
+      <div class="container">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                src="https://ideogram.ai/assets/image/lossless/response/5SmNdznwSX6KFh5eq2zuhQ"
+                alt="PIC"
+              />
+              <center>Progrmming in C language</center>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://ideogram.ai/assets/image/lossless/response/ddEWYfDHTrCk2bebZniQww"
+                alt="OOPC"
+              />
+              <center>Object-Oriented programming using C++</center>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://ideogram.ai/assets/image/lossless/response/OBd73IuiQbu9l0zlWp4u-g"
+                alt="DSA"
+              />
+              <center>Data Structures and Algorithms</center>
+            </div>
+          </div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
     </div>
     <div id="cyber pathways" class="section3">
+      <center>
         <h1>Cyber Pathways</h1>
+      </center>
     </div>
     <div id="laptops" class="section4">
+      <center>
         <h1>Laptop buying guide</h1>
+      </center>
     </div>
     <div id="about" class="section5">
+      <center>
         <h1>About</h1>
+      </center>
     </div>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true,
 
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
 </html>
